@@ -1,6 +1,7 @@
 import { Button } from 'antd';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import RootLayout from '../../components/Layouts/RootLayout';
 
 const HomePage = () => {
 
@@ -16,3 +17,12 @@ const HomePage = () => {
 }
 
 export default HomePage;
+
+
+HomePage.getLayout = function getLayout(page) {
+  return (
+    <RootLayout>
+      {page}
+    </RootLayout>
+  )
+}
